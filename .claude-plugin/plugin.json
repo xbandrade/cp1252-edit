@@ -1,0 +1,8 @@
+{
+  "name": "cp1252-edit",
+  "version": "2.0.0",
+  "description": "Safely view, search, edit, check and repair Windows-1252 / legacy-encoded source files (AdvPL .prw/.prx, Clipper/Harbour .prg, Delphi, VB6...) without the UTF-8 tools corrupting every accent. Includes a guard hook that blocks Edit/Write on such files.",
+  "author": { "name": "Bruno Andrade" },
+  "license": "MIT",
+  "keywords": ["cp1252", "windows-1252", "encoding", "advpl", "protheus", "legacy", "latin-1"]
+}

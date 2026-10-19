@@ -1,0 +1,12 @@
+#!/bin/sh
+# Launcher for cp1252_edit.py: picks the first Python 3 that actually runs
+# (`python`/`python3` may be Windows Store stubs that only print an error).
+# Usage: sh path/to/cp1252 <command> [args...]
+here=$(dirname "$0")
+for py in python3 python "py -3"; do
+  if $py -c 'import sys; sys.exit(0 if sys.version_info >= (3, 7) else 1)' </dev/null >/dev/null 2>&1; then
+    exec $py "$here/cp1252_edit.py" "$@"
+  fi
+done
+echo "ERROR: no working Python 3.7+ found (tried python3, python, py -3)" >&2
+exit 1

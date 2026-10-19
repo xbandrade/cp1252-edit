@@ -1,0 +1,17 @@
+{
+  "description": "Blocks Edit/Write on Windows-1252 (non-UTF-8) files so they are not corrupted; points the agent to the cp1252-edit skill.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run-python.sh\" \"${CLAUDE_PLUGIN_ROOT}/hooks/guard_encoding.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

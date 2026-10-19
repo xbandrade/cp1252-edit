@@ -1,0 +1,11 @@
+{
+  "name": "cp1252-edit",
+  "owner": { "name": "Bruno Andrade" },
+  "plugins": [
+    {
+      "name": "cp1252-edit",
+      "source": ".",
+      "description": "Safely edit Windows-1252 / legacy-encoded source files (AdvPL, Clipper, Delphi, VB6...) and block the UTF-8 Edit/Write tools from corrupting them."
+    }
+  ]
+}
